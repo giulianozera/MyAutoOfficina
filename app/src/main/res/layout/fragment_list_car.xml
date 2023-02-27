@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#985454"
+    tools:context=".fragments.ListCarFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:background="@color/cardview_dark_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Brand"
+        android:padding="5dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:background="@color/cardview_dark_background"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Model"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brand"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/cardview_dark_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Plate" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brand"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/cardview_dark_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Chassis Number" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/car_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:foregroundGravity="center" />
+
+
+</FrameLayout>

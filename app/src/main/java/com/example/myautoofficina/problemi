@@ -1,0 +1,7 @@
+i problemi che non sono riuscito a risolvere a livello di tempistiche sono stati
+il richiamo di un getall() dal dao ma essendo suspend dovevo implementare delle
+coroutine le quali però non sono riuscite a risolvere il problema
+
+utilizzo di spinner il quale doveva utilizzare le chiavi secondarie le quali
+per il motivo precedente non potevano essere richiamate.
+

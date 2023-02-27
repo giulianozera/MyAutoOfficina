@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homePageFragment">
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.myautoofficina.fragments.AddCarFragment"
+        android:label="fragment_add_car"
+        tools:layout="@layout/fragment_add_car" >
+        <action
+            android:id="@+id/action_addCarFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addCarFragment_to_homePageFragment2"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addCarFragment_to_homePageFragment3"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addCarFragment_to_listCarFragment"
+            app:destination="@id/listCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClientFragment"
+        android:name="com.example.myautoofficina.fragments.AddClientFragment"
+        android:label="fragment_add_client"
+        tools:layout="@layout/fragment_add_client" >
+        <action
+            android:id="@+id/action_addClientFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addClientFragment_to_homePageFragment2"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addClientFragment_to_listViewClientFragment"
+            app:destination="@id/listViewClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInterventionsFragment"
+        android:name="com.example.myautoofficina.fragments.AddInterventionsFragment"
+        android:label="fragment_add_interventions"
+        tools:layout="@layout/fragment_add_interventions" >
+        <action
+            android:id="@+id/action_addInterventionsFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addInterventionsFragment_to_homePageFragment2"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_addInterventionsFragment_to_listInterventionsFragment"
+            app:destination="@id/listInterventionsFragment" />
+        <action
+            android:id="@+id/action_addInterventionsFragment_to_listInterventionsFragment2"
+            app:destination="@id/listInterventionsFragment" />
+        <action
+            android:id="@+id/action_addInterventionsFragment_to_listInterventionsFragment3"
+            app:destination="@id/listInterventionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listViewClientFragment"
+        android:name="com.example.myautoofficina.fragments.ListViewClientFragment"
+        android:label="fragment_list_view_client"
+        tools:layout="@layout/fragment_list_view_client" >
+        <action
+            android:id="@+id/action_listViewClientFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCarFragment"
+        android:name="com.example.myautoofficina.fragments.ListCarFragment"
+        android:label="fragment_list_car"
+        tools:layout="@layout/fragment_list_car" >
+        <action
+            android:id="@+id/action_listCarFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listInterventionsFragment"
+        android:name="com.example.myautoofficina.fragments.ListInterventionsFragment"
+        android:label="fragment_list_interventions"
+        tools:layout="@layout/fragment_list_interventions" >
+        <action
+            android:id="@+id/action_listInterventionsFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_listInterventionsFragment_to_homePageFragment2"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_listInterventionsFragment_to_homePageFragment3"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.myautoofficina.fragments.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_addClientFragment"
+            app:destination="@id/addClientFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_addCarFragment"
+            app:destination="@id/addCarFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_addInterventionsFragment"
+            app:destination="@id/addInterventionsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_listInterventionsFragment"
+            app:destination="@id/listInterventionsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_listCarFragment"
+            app:destination="@id/listCarFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_listViewClientFragment"
+            app:destination="@id/listViewClientFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_listInterventionsFragment2"
+            app:destination="@id/listInterventionsFragment" />
+    </fragment>
+</navigation>
