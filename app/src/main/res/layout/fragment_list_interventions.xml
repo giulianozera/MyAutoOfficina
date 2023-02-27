@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#985454"
-
     tools:context=".fragments.ListInterventionsFragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,8 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:foregroundGravity="center"
-        android:layout="@layout/client_item"
+        tools:listitem="@layout/intervention_item"
         />
 
 

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/istockphoto_492676596_1024x1024_2"
     tools:context=".fragments.AddInterventionsFragment">
 
 
@@ -10,6 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <EditText
+            android:background="@color/cardview_dark_background"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/clientemacchina"
+            android:text="cliente">
+
+        </EditText>
+
+
+        <Spinner
+            android:id="@+id/spinnerIdCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <EditText
             android:background="@color/cardview_dark_background"

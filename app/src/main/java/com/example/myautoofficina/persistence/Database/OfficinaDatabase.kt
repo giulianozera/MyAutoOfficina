@@ -27,7 +27,7 @@ abstract class OfficinaDatabase : RoomDatabase(){
          * La versione corrente del database.
          */
         const val DATABASE_NAME = "officina_db"
-        const val VERSION=6
+        const val VERSION=7
     }
     /**
      * Accede al DAO delle persone.

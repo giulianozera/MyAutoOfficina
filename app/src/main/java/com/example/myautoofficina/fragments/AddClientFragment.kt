@@ -49,11 +49,12 @@ class AddClientFragment : Fragment() {
                 0,
                 name = name,
                 surname = surname,
-                email = email
+                email = email,
             )
 
             lifecycleScope.launch(Dispatchers.IO) {
                 OfficinaDatabase.getAppDatabase(requireContext()).getClientDao().save(client)
+
 
             }
             findNavController().popBackStack()

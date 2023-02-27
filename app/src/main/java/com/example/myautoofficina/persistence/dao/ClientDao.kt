@@ -20,7 +20,7 @@ public interface ClientDao {
      * @return l'elenco delle persone desiderate.
      */
     @Query("SELECT * FROM Client ")
-    public abstract suspend fun getAll(): List<Client>
+     suspend fun getAll(): List<Client>
 
     /**
      * Salva una persona.

@@ -21,12 +21,12 @@ Per ogni veicolo occorre registrare la data di arrivo, quella di consegna e il n
 
 @Entity(
     tableName = "Interventions",
-/*   foreignKeys = [ForeignKey(
+  foreignKeys = [ForeignKey(
         entity = Car::class,
         parentColumns = ["id"],
         childColumns = ["car_id"],
         onDelete = ForeignKey.SET_NULL
-    )]*/
+    )]
 )
 
 data class Interventions (
@@ -36,6 +36,6 @@ data class Interventions (
     val hours: String,
     val arrive: String,
     val departure: String,
-/*    @ColumnInfo(name = "car_id", index = true)
-    val carId: Long?*/
+   @ColumnInfo(name = "car_id", index = true)
+    val carId: Long?
 )

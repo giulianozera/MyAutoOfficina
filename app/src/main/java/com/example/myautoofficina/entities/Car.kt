@@ -18,12 +18,12 @@ Per ogni veicolo occorre registrare la data di arrivo, quella di consegna e il n
 
 @Entity(
     tableName = "Car",
-   /*    foreignKeys = [ForeignKey(
+      foreignKeys = [ForeignKey(
         entity = Client::class,
         parentColumns = ["id"],
         childColumns=["Owner_id"],
         onDelete = ForeignKey.SET_NULL
-    )]*/
+    )]
 
 )data class Car(
     @PrimaryKey(autoGenerate = true)
@@ -32,6 +32,6 @@ Per ogni veicolo occorre registrare la data di arrivo, quella di consegna e il n
     val model:String,
     val plate:String,
     val chassisNumber: String,
-    /*@ColumnInfo(name="Owner_id",index=true)
-    val Owner_id:Long?*/
+    @ColumnInfo(name="Owner_id",index=true)
+    val Owner_id:Long?
 )

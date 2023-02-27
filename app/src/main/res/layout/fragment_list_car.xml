@@ -75,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:foregroundGravity="center" />
+        android:foregroundGravity="center"
+        tools:listitem="@layout/car_item" />
 
 
 </FrameLayout>

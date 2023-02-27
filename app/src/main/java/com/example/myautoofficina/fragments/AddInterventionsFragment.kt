@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.myautoofficina.R
@@ -26,7 +28,35 @@ class AddInterventionsFragment : Fragment() {
     private lateinit var buttonAddInterventions: Button
 
 
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val db = OfficinaDatabase.getAppDatabase(requireContext()).getInterventionsDao()
+
+        // Chiamata asincrona alla funzione getAll di ClientDao
+        viewLifecycleOwner.lifecycleScope.launch {
+
+            val interventions = db.getAll()
+
+
+
+            // Utilizzo dei dati restituiti dalla funzione getAll
+            // per popolare lo spinner
+            val spinner = view.findViewById<Spinner>(R.id.spinnerIdCliente)
+            spinner.adapter = ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_spinner_dropdown_item,
+                interventions
+            )
+        }
+    }
+
+
+
+
     // Creiamo la vista del nostro Fragment
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_add_interventions, container, false)
         editTextArrive = view.findViewById(R.id.editTextArriveDate)
@@ -46,7 +76,8 @@ class AddInterventionsFragment : Fragment() {
                 problem=problem,
                 hours = hours ,
                 arrive=arrive,
-                departure = departure
+                departure = departure,
+                null
             )
 
             lifecycleScope.launch(Dispatchers.IO) {

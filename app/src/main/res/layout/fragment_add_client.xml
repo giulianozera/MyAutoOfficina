@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/istockphoto_492676596_1024x1024_2"
     tools:context=".fragments.AddClientFragment">
 
     <LinearLayout
@@ -11,39 +12,39 @@
         android:orientation="vertical">
 
         <EditText
-            android:background="@color/cardview_dark_background"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:hint="Name"/>
+            android:background="@color/cardview_dark_background"
+            android:hint="Name"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <EditText
-            android:background="@color/cardview_dark_background"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:id="@+id/editTextSurname"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:hint="Surname"/>
+            android:background="@color/cardview_dark_background"
+            android:hint="Surname"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
 
         <EditText
-            android:background="@color/cardview_dark_background"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:background="@color/cardview_dark_background"
+            android:hint="Email"
             android:inputType="textEmailAddress"
-            android:hint="Email"/>
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonAddClient"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Add client"/>
+            android:text="Add client" />
 
     </LinearLayout>
 

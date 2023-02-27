@@ -34,18 +34,14 @@ class MainActivity : AppCompatActivity() {
 
     private var number = R.id.menu_home_page_fragment
 
-   override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (number != item.itemId)
+/*   override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_home_page_fragment)
             when (item.itemId) {
                 R.id.menu_home_page_fragment -> nav.navigate(R.id.action_listCarFragment_to_homePageFragment)
-                R.id.menu_home_page_fragment -> nav.navigate(R.id.action_addCarFragment_to_homePageFragment)
-                R.id.menu_home_page_fragment -> nav.navigate(R.id.action_addClientFragment_to_homePageFragment2)
                 R.id.menu_home_page_fragment -> nav.navigate(R.id.action_listViewClientFragment_to_homePageFragment)
-                R.id.menu_home_page_fragment -> nav.navigate(R.id.action_addInterventionsFragment_to_homePageFragment)
-                R.id.menu_home_page_fragment -> nav.navigate(R.id.action_listInterventionsFragment_to_homePageFragment)
+                R.id.menu_home_page_fragment -> nav.navigate(R.id.action_listInterventionsFragment_to_homePageFragment3)
             }
-        number = item.itemId
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
 }
