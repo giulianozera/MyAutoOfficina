@@ -25,6 +25,7 @@
         <Spinner
             android:id="@+id/spinnerIdCliente"
             android:layout_width="match_parent"
+            android:scrollbarSize="24dp"
             android:layout_height="wrap_content" />
 
         <EditText
