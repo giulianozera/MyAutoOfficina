@@ -1,6 +1,7 @@
 package com.example.myautoofficina.fragments
 
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,12 +13,10 @@ import android.widget.EditText
 import android.widget.Spinner
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.room.Room
 import com.example.myautoofficina.R
 import com.example.myautoofficina.entities.Car
 import com.example.myautoofficina.persistence.Database.OfficinaDatabase
 import com.example.myautoofficina.persistence.Database.getAppDatabase
-import com.example.myautoofficina.persistence.dao.ClientDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -42,6 +41,8 @@ class AddCarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val db = OfficinaDatabase.getAppDatabase(requireContext()).getCarDao()
 
+
+
         // Chiamata asincrona alla funzione getAll di ClientDao
         viewLifecycleOwner.lifecycleScope.launch {
             val clients = db.getAll()
@@ -54,7 +55,21 @@ class AddCarFragment : Fragment() {
                 android.R.layout.simple_spinner_dropdown_item,
                 clients
             )
+
         }
+
+
+    }
+
+
+
+//trova proprietario tramite id
+    fun findCarOwner(context: Context, carId: Int): String? {
+        val db = OfficinaDatabase.getAppDatabase(requireContext()).getCarDao()
+        val clientD=OfficinaDatabase.getAppDatabase(requireContext()).getClientDao()
+        val ownerId = db.findOwnerId(carId)
+        val owner = clientD.getClientId(ownerId)
+        return owner?.let { "${it.name} ${it.surname} <${it.email}>" }
     }
 
 
@@ -93,7 +108,10 @@ class AddCarFragment : Fragment() {
                 }
             findNavController().popBackStack()
 
+
+
             }
+
 
             // Ritorna la vista del fragment
 

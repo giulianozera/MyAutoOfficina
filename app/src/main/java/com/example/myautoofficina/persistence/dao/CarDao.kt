@@ -32,7 +32,10 @@ public interface CarDao {
 
 
     @Query("SELECT * FROM Car WHERE id = :id")
-    fun getCarId(id: Long): Car
+    fun getCarId(id: Int): Car
+
+    @Query("SELECT owner_id FROM car WHERE id = :carId")
+    fun findOwnerId(carId: Int): Int
 
 
 

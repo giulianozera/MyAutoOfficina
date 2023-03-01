@@ -1,5 +1,6 @@
 package com.example.myautoofficina.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -50,6 +51,16 @@ class AddInterventionsFragment : Fragment() {
                 interventions
             )
         }
+    }
+
+
+    //trova maacchina tramite id
+    fun findCarOwner(context: Context, interId: Int): String? {
+        val db = OfficinaDatabase.getAppDatabase(requireContext()).getInterventionsDao()
+        val carD=OfficinaDatabase.getAppDatabase(requireContext()).getCarDao()
+        val carId = db.findInterId(interId)
+        val car = carD.getCarId(carId)
+        return car?.let { "${it.model} ${it.brand} ${it.plate} ${it.chassisNumber}" }
     }
 
 

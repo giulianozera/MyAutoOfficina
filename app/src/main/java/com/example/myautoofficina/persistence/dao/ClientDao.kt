@@ -1,10 +1,8 @@
 package com.example.myautoofficina.persistence.dao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.myautoofficina.entities.Car
 import com.example.myautoofficina.entities.Client
 /**
  * Funzionalità necessarie all'applicazione per funzionare.
@@ -32,7 +30,7 @@ public interface ClientDao {
 
 
     @Query("SELECT * FROM Client WHERE id = :id")
-    fun getClientId(id: Long): Client
+    fun getClientId(id: Int): Client
 
 
 

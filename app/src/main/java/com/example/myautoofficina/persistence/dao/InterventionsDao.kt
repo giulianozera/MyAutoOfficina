@@ -32,5 +32,8 @@ interface InterventionsDao {
     @Query("SELECT * FROM Interventions WHERE id = :id")
     fun getInterventionId(id: Long): Interventions
 
+    @Query("SELECT owner_id FROM car WHERE id = :interId")
+    fun findInterId(interId: Int): Int
+
 
 }
